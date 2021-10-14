@@ -20,7 +20,7 @@ mongoose.connect(MONGO_URI,
 
 
 app.get('/', (req, res) => {
-  res.send('Holiwis! bienvenido a node y express js')
+  res.send('Hola! bienvenido a Woodab')
 })
 
 app.get('/ruta-dos', (req, res) => {
@@ -28,7 +28,7 @@ app.get('/ruta-dos', (req, res) => {
 })
 
 app.get('/clientes/{id}', (req, res) => {
-  res.send('Hey! ¿Que tal estás?')
+  res.send('Hey! ¿Té interesa este sitio?')
 })
 
 routerApi(app)
