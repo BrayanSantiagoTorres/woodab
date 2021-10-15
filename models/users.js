@@ -7,7 +7,7 @@ const usersSchema = new Schema({
   phone: { type: String, default: ''},
   edad: { type: String, dafault: ''},
   genero: { type: String, enum: ['M', 'F', 'U'], defaul: 'u'},
-  pictures: { type: String, default: 'https://images.vexels.com/media/users/3/137047/isolated/preview/5831a17a290077c646a48c4db78a81bb-icono-de-perfil-de-usuario-azul.png'},
+  pictures: { type: String, default: ''},
   email: { require: true, type: String, lowercase: true, trim: true, unique: true},
 
   },{
