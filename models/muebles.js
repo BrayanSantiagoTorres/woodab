@@ -3,12 +3,12 @@ const Schema = mongoose.Schema
 const mueblesSchema = new Schema({
 
 
-     name: 'String',
-     fecha: 'String',
+     name: String,
+     fecha: Date,
      cantidadmuebl: {type: String, trim: true, default: ' 25 muebles'},
-     categorias: {type: String, default: 'Roble, Pino'},
+     categorias: {type: String, default: 'tipo1'},
      precio: {type: String, default: ' 2000'},
-     validUntil: 'Date',
+     validUntil: Date,
      valid: { type: Boolean, default: true },
 
 

@@ -3,11 +3,11 @@ const Schema = mongoose.Schema
 const clientesSchema = new Schema({
 
      name: String,
-     lastName: { type: String, default: '' },
+     lastName: { type: String },
      address: { type: String,lowercase: true, trim: true, default: 'Guadalajara' },
      phone: { type: String, default: '' },
      genero: { type: String, enum: ['H', 'M', 'U'], default: 'U'},
-     validUntil: 'Date',
+     validUntil: Date,
      valid: { type: Boolean, default: true }
 },{
      timestamps: true
