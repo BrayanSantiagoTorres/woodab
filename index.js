@@ -2,7 +2,10 @@ const express = require('express')
 const routerApi = require('./routes')
 const app = express()
 const { config } = require('./config/index')
+const { checkApiKey } = require('./middleware/auth.handler')
+const passport = require('passport') //requerimos el pasport
 
+app.use(passport.initialize) // luego lo inicializamos
 const port = config.port
 
 const mongoose = require('mongoose')
@@ -19,11 +22,12 @@ mongoose.connect(MONGO_URI,
 ).then(() => console.log('Existe conexión ahora')).catch(e=>console.log(e))
 
 
+require('./utils/auth') //antes de llamar cualquier ruta se llama el local strategy
 app.get('/', (req, res) => {
   res.send('Hola! bienvenido a Woodab')
 })
 
-app.get('/ruta-dos', (req, res) => {
+app.get('/ruta-dos', checkApiKey, (req, res) => {
   res.send('Hey! ¿Que tal estás?')
 })
 

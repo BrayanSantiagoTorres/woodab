@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const Quejas = require('../models/quejas')
+const Factura = require('../models/factura')
 
 router.get('/', (req, res) =>{
      try{
