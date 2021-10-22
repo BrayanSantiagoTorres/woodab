@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const Users = require('../models/users')
+const Ventas = require('../models/ventas')
 
 router.get('/', (req, res) => {
   try{

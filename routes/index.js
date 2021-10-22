@@ -1,16 +1,13 @@
 const clientesRouters = require('./clientes')
-const mueblesRouters = require('./muebles')
-const quejasRouters = require('./quejas')
-const usersRouters = require('./users')
-
-//const devolucionesRouters = require('./devoluciones')
-//const clientesRouters = require('./clientes')
+const productoRouters = require('./producto')
+const facturaRouters = require('./factura')
+const ventasRouters = require('./ventas')
 
 function routerApi(app){
   app.use('/clientes', clientesRouters)
-  app.use('/muebles', mueblesRouters)
-  app.use('/quejas', quejasRouters)
-  app.use('/users', usersRouters)
+  app.use('/producto', productoRouters)
+  app.use('/factura', facturaRouters)
+  app.use('/ventas', ventasRouters)
 }
 
 module.exports = routerApi
