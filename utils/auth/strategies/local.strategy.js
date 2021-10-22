@@ -14,6 +14,7 @@ const LocalStrategy = new Strategy( //se declara la estrategia
       console.log(user)
       const isMatch = await bcrypt.compare(password, user.password) //si hay match lo comparamos con bcrypt, el password con el password del user
       if(!isMatch) throw { status: 401, message: 'Sin Autorización', error: true} //en caso de no haber match se manda un error con el mensaje
+      delete user.password
       done(null, user) //si hay match se manda el usuario
     } catch(error){
       done(error, false)

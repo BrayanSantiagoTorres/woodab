@@ -5,7 +5,8 @@ const { config } = require('./config/index')
 const { checkApiKey } = require('./middleware/auth.handler')
 const passport = require('passport') //requerimos el pasport
 
-app.use(passport.initialize) // luego lo inicializamos
+
+app.use(passport.initialize()) // luego lo inicializamos
 const port = config.port
 
 const mongoose = require('mongoose')
