@@ -4,6 +4,7 @@ const productoRouters = require('./producto')
 const facturaRouters = require('./factura')
 const ventasRouters = require('./ventas')
 const authRouters = require('./auth') //tambien el auth
+const usersRouters = require('./users')
 
 function routerApi(app){
   app.use(express.json()) // el express json
@@ -12,6 +13,7 @@ function routerApi(app){
   app.use('/producto', productoRouters)
   app.use('/factura', facturaRouters)
   app.use('/ventas', ventasRouters)
+  app.use('/users', usersRouters)
 }
 
 module.exports = routerApi

@@ -15,7 +15,7 @@ router.post('/login',
       }
       //se genera un token unico con ese usuario
       const token = jwt.sign(payload, '6de389ed5da80327ab292db7c3f9f3cce1c1d343b562f8c9fa597f35bd85d8bc') //los datos se unen con la clave secreta
-      res.json({
+      res.json({ //se pide el user y el token
         user,
         token
       })
