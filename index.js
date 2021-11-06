@@ -1,10 +1,12 @@
 const express = require('express')
+const product = require('./api/product')
 const routerApi = require('./routes')
 const app = express()
 const { config } = require('./config/index')
 const { checkApiKey } = require('./middleware/auth.handler')
 const passport = require('passport') //requerimos el pasport
 
+app.use("/api/product", product)
 
 app.use(passport.initialize()) // luego lo inicializamos
 const port = config.port
