@@ -6,7 +6,7 @@ const clientesSchema = new Schema({
   lastName: { type: String, default: ''},
   phone: { type: String, default: ''},
   edad: { type: String, dafault: ''},
-  genero: { type: String, enum: ['M', 'F', 'U'], defaul: 'u'},
+  genre: { type: String, enum: ['M', 'F', 'U'], defaul: 'u'},
   pictures: { type: String, default: ''},
   email: { require: true, type: String, lowercase: true, trim: true, unique: true},
 
