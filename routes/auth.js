@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken')
 const router = express.Router()
 
 router.post('/login',
-  passport.authenticate('local', {session:false}), //el usuario se logea
+  passport.authenticate('local', {session:false}), //el usuario se logeaaaa
   async (req, res, next)=>{
     try{
       const user = req.user
